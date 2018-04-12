@@ -1,19 +1,19 @@
 pragma solidity ^0.4.17;
 
-contract CompaignFactory {
-    address[] public deployedCompaigns;
+contract CampaignFactory {
+    address[] public deployedCampaigns;
     
-    function createCompaign(uint minimum) public {
-        address newCompaign = new Compaign(minimum, msg.sender);
-        deployedCompaigns.push(newCompaign);
+    function createCampaign(uint minimum) public {
+        address newCompaign = new Campaign(minimum, msg.sender);
+        deployedCampaigns.push(newCompaign);
     }
     
-    function getDeployedCompaigns() public view returns (address[]) {
-        return deployedCompaigns;
+    function getDeployedCampaigns() public view returns (address[]) {
+        return deployedCampaigns;
     }
 }
 
-contract Compaign {
+contract Campaign {
     struct Request {
         string description;
         uint value;
@@ -34,7 +34,7 @@ contract Compaign {
         _;
     }
     
-    function Compaign(uint minimum, address creator) public {
+    function Campaign(uint minimum, address creator) public {
         manager = creator;
         minimumContribution = minimum;
     }
