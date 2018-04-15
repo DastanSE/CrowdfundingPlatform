@@ -4,7 +4,8 @@
   "description": "This project is for my thesis work. Beijing Institute of Technology 2018 Dastan Zhanibek.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "next dev"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ const compiledFactory = require('./build/CampaignFactory');
 
 const provider = new HDWalletProvider(
   'decrease boss used edge disagree inspire gather cinnamon remember check sustain secret',
-  'https://rinkeby.infura.io/kgR3DqFXEJSh5yiMcMNM'
+  'https://rinkeby.infura.io/qTs2LFWovY1RmcqEOGD3'
 );
 
 const web3 = new Web3(provider);

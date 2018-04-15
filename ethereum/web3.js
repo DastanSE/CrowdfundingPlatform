@@ -12,4 +12,7 @@ if(typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
     'https://rinkeby.infura.io/kgR3DqFXEJSh5yiMcMNM'
   );
 
+  web3 = new Web3(provider);
+}
+
 export default web3;
