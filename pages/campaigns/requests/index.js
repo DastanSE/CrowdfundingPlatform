@@ -49,7 +49,7 @@ class RequestIndex extends Component {
         </h3>
         <Link route={`/campaigns/${this.props.address}/requests/new`}>
           <a>
-            <Button primary floated='right' style={{marginBottom: 10}}>Add Requests </Button>
+            <Button primary floated='right' style={{marginBottom: 10}}>加请求 </Button>
           </a>
         </Link>
         <Table>
@@ -58,23 +58,19 @@ class RequestIndex extends Component {
               <HeaderCell>
                 ID
               </HeaderCell>
+              <HeaderCell>描述</HeaderCell>
+              <HeaderCell>余额</HeaderCell>
               <HeaderCell>
-                Description
+                接受者
               </HeaderCell>
               <HeaderCell>
-                Amount
+                批准计数
               </HeaderCell>
               <HeaderCell>
-                Recipient
+                批准
               </HeaderCell>
               <HeaderCell>
-                Approval Count
-              </HeaderCell>
-              <HeaderCell>
-                Approve
-              </HeaderCell>
-              <HeaderCell>
-                Finalize
+                最终确定 Finalize
               </HeaderCell>
             </Row>
           </Header>
@@ -82,7 +78,7 @@ class RequestIndex extends Component {
             {this.renderRow()}
           </Body>
         </Table>
-        <div>Found {this.props.requestCount} requests.</div>
+        <div>找到 {this.props.requestCount} 个请求</div>
       </Layout>
     );
   }

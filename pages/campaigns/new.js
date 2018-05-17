@@ -38,13 +38,13 @@ class CampaignNew extends Component {
   render() {
     return (
       <Layout>
-        <h3>Create a Campaign</h3>
+        <h3>创建一个运动</h3>
 
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
-            <label>Minimum Contribution</label>
+            <label>最小投资余额</label>
             <Input
-              label="wei"
+              label="wei值"
               labelPosition="right"
               value={this.state.minimumContribution}
               onChange={event =>
@@ -52,9 +52,9 @@ class CampaignNew extends Component {
             />
           </Form.Field>
 
-          <Message error header="Oops!" content={this.state.errorMessage} />
+          <Message error header="错误!" content={this.state.errorMessage} />
           <Button loading={this.state.loading} primary>
-            Create!
+            创建!
           </Button>
         </Form>
       </Layout>

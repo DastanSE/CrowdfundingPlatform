@@ -49,35 +49,33 @@ class RequestNew extends Component {
     return (
       <Layout>
         <Link route={`/campaigns/${this.props.address}/requests`}>
-          <a>
-            Back
-          </a>
+          <a>回去</a>
         </Link>
-        <h3>Create a Request</h3>
+        <h3>创造花投资的请求</h3>
         <Form error={!!this.state.errorMessage} onSubmit={this.onSubmit}>
           <Form.Field>
-            <label>Description</label>
+            <label>描述</label>
             <Input
               value={this.state.description}
               onChange={e => this.setState({ description: e.target.value })}
             />
           </Form.Field>
           <Form.Field>
-            <label>Value in Ether</label>
+            <label>以太币值</label>
             <Input 
               value={this.state.value}
               onChange={e => this.setState({ value: e.target.value })}
             />
           </Form.Field>
           <Form.Field>
-            <label>Recipient</label>
+            <label>接受者</label>
             <Input 
               value={this.state.recipient}
               onChange={e => this.setState({ recipient: e.target.value })}
             />
           </Form.Field>
-          <Message error header='Oops!' content={this.state.errorMessage} />
-          <Button primary loading={this.state.loading}>Create!</Button>
+          <Message error header='发生错误!' content={this.state.errorMessage} />
+          <Button primary loading={this.state.loading}>创建!</Button>
         </Form>
       </Layout>
     );

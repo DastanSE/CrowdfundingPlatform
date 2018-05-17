@@ -46,15 +46,13 @@ class RequestRow extends Component {
         </Cell>
         <Cell>
           {complete ? null : (
-          <Button color='green' basic onClick={this.onApprove}>
-            Approve
-          </Button>
+          <Button color='green' basic onClick={this.onApprove}>批准</Button>
           )}
         </Cell>
         <Cell>
         {complete ? null : (
           <Button color='teal' basic onClick={this.onFinalize}>
-            Finalize
+            最终确定Finalize
           </Button>
         )}
         </Cell>
