@@ -30,18 +30,18 @@ beforeEach(async () => {
 });
 
 describe('Campaigns', () => {
-  it('deploys a factory and a campaign', () => {
+  it('提交CreateCampaign 与 FactoryCampaign智能合约成功', () => {
     assert.ok(factory.options.address);
     assert.ok(campaign.options.address);
   });
 
-  it('marks caller as the campaign manager', async () => {
+  it('CampaignFactory 调用者作为发起者', async () => {
     const manager = await campaign.methods.manager().call();
 
     assert.equal(accounts[0], manager);
   });
 
-  it('allows people to contribute money and marks them as approvers', async () => {
+  it('让投资方投资以太币并且他们作为投资者', async () => {
     await campaign.methods.contribute().send({
       value: '200',
       from: accounts[1]
@@ -51,7 +51,7 @@ describe('Campaigns', () => {
     assert(isContributor);
   });
 
-  it('requires a minimum contribution', async () => {
+  it('要求投资至少发起者定义的金额以上', async () => {
     try {
       await campaign.methods.contribute().send({
         value: '5',
