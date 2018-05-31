@@ -1,9 +1,10 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory');
+const mnemonic = 'decrease boss used edge disagree inspire gather cinnamon remember check sustain secret';
 
 const provider = new HDWalletProvider(
-  'decrease boss used edge disagree inspire gather cinnamon remember check sustain secret',
+  mnemonic,
   'https://rinkeby.infura.io/qTs2LFWovY1RmcqEOGD3'
 );
 
